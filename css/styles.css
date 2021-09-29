@@ -1,0 +1,142 @@
+body{
+    background-color: #DAF5C6;
+    font-family: 'Montserrat', sans-serif;
+}
+body #game{
+    background-color: #DAF5C6;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    height: 100vh;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    background-color: #30362B;
+}
+.nav-item{
+    border-bottom:2px solid transparent;
+}
+.nav-item a{
+    color: #fff !important;
+    
+}
+.nav-item a.active{
+    color: #C4DBB2 !important;
+
+}
+.nav-item:hover{
+    transform: scale(.97);
+    transition: transform .2s;
+    border-bottom: 2px solid #C4DBB2;
+}
+.nav-item{
+    padding: 0 10px;
+}
+#step2{
+    margin-top: 12rem;
+}
+#step1{
+    margin-top: 20rem;
+    text-align: center;
+}
+
+.juego-memoria{
+    width: 420px !important;
+    height: 570px !important;
+    display: flex !important;
+    flex-wrap: wrap;
+    margin: auto;
+    perspective: 1000px; /* cambia el efecto a 3d */
+    margin-top: 2rem;
+    
+}
+.cartas{
+    /* calculamos el tamaño de los cards para que se encajen 2 filas verticales y 2 cards horizontales */
+    width: calc(50% - 10px);
+    height: calc(50% - 10px);
+    margin: 5px;
+    position: relative;/* que defina la posicion para que el card pueda ocupar ese espacio */
+    transform: scale(1); 
+    /* pone una transicción para que se vea bien el 3d */
+    transform-style: preserve-3d;
+    transition: transform .5s; 
+}
+.cartas:active{ /* para que se mueva mientras se haga click*/
+    transform: scale(.97);
+    transition: transform .2s;
+}
+.cartas.flip{ 
+    transform: rotateY(180deg);
+}
+
+.alante, .detras{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    /* que ocupe todo el bloque en respecto al padre (memory card) */
+    position: absolute;
+    /* ahora seguimos para que se vea la imagen de atrás*/
+    backface-visibility: hidden;
+}
+
+.alante{
+    transform: rotateY(180deg);
+}
+.btn{
+    background-color: #30362B;
+    color: #DAF5C6;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.btn:hover{
+    background-color: #DAF5C6;
+    color: #30362B;
+}
+#modalFireworks{
+    background-image: url("../img/fireworks.gif"); 
+    color: #DAF5C6;
+    font-weight: 600 !important;
+}
+.modal-title{
+    font-size: 1.5rem !important;
+    font-weight: 600;
+}
+.modal-body{
+    background-color:#30362B;
+}
+
+#step6{
+    margin-top: 3rem;
+}
+thead{
+    border-bottom: 2px solid #A467A8;
+}
+
+/* ESTILOS DEL JUEGO VERSION NAVIDAD */
+body#christmas{
+    background-image: url("../img/snowfall_2.gif");
+}
+
+.juego-memoria#christmas-game{
+    width: 640px !important;
+    height:640px !important;
+    margin-top: 1rem;
+    
+}
+#christmas-game .cartas {
+    /* calculamos el tamaño de los cards para que se encajen 3 filas verticales y 4 cards horizontales */
+    width: calc(25% - 10px) !important;
+    height: calc(33.333% - 10px) !important;
+    margin: 5px;
+}
+
+
+#christmas-game .alante, #christmas-game .detras{
+    background-color: #3B8F4D;
+    border: 2px solid #3B8F4D;
+ 
+}
