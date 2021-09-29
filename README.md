@@ -1,4 +1,4 @@
-# Prueba de nivel
+# EJERCICIO 1 DE PROGRA ERB
 
 El ejercicio consiste en crear una página web desde cero.
 
@@ -45,3 +45,10 @@ Este nuevo documento debe ser accesible desde la barra de navegación de los ant
 Crea un nuevo documento web que contenga el histórico de los resultados de las partidas jugadas.
 
 Este nuevo documento debe ser accesible desde la barra de navegación de los anteriores.
+
+### Extra
+
+He creado una versión de Navidad para el juego de memoria, con más cartas y mas opciones.
+
+### IMPORTANTE
+EN ESA VERSIÓN EL HISTORICO SOLO FUNCIONA CON GOOGLE CHROME. SI QUIERES UTILIZAR FIREFOX, hace falta cambiar "localSorage" por "sessionStorage" en los archivos scripts.js y scriptsChristmas.js
